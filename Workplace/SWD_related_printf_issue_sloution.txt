@@ -1,0 +1,15 @@
+If you are facing issues of printf printing on console by using SWD ITM, Here is the solution.
+
+Steps:
+1) open goole.com
+2) search for your microcontroller datasheet
+    Eg. If you are using STM32L476RG Nucleo board.
+    Search for controller "STM32L476RG datasheet".
+3) open STM32L476RG datasheet.
+4) Press "CTRL+F" (Find option in PDF document).
+5) Now write "Startup clock" in search box and hit enter.
+6) look for "The MSI is used as system clock source after startup from Reset configured at ________Mhz."   <----Here, this blank line contain frequency value.
+7) Now, when you are configuring in "Debug Configuration" window -> "Debugger" tab -> "Serial Wire Viewer(SWV)" section -> "core clock = ____________ MHz" <---- write the frequency we got from step 6 to here.
+8) click debug.
+
+Thank you.
